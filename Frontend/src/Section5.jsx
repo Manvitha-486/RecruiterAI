@@ -21,21 +21,21 @@ export default function Section5() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
         <TiltCard
           delay={0}
-          image="/person1.jpg"
+          image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"
           text="We used to spend hours screening resumes manually, and still missed strong candidates. RecruiterAI reduced our screening time drastically and ensured we only met high-quality applicants. It completely changed our hiring workflow."
           name="John Davis"
           role="Head of Talent, GrowthLabs"
         />
         <TiltCard
           delay={0.2}
-          image="/images/ChatGPT Image Feb 6, 2026, 03_47_15 PM.png"
+          image="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1888&auto=format&fit=crop"
           text="As a startup founder, I don't have a dedicated HR team. RecruiterAI gave us a structured hiring process without adding complexity. We now hire faster and with much more confidence."
           name="Ananya Sharma"
           role="Founder & CEO, NextScale AI"
         />
         <TiltCard
           delay={0.4}
-          image="/images/ChatGPT Image Feb 6, 2026, 03_57_39 PM.png"
+          image="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop"
           text="Scheduling interviews across multiple time zones was a nightmare for our remote team. RecruiterAI automated everything — from screening to calendar coordination — and helped us cut hiring time almost in half."
           name="Daniel Lee"
           role="CTO, CloudBridge Technologies"
@@ -105,12 +105,12 @@ function TiltCard({ image, text, name, role, delay }) {
       >
         {/* IMAGE BACKGROUND */}
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-70 group-hover:opacity-100 transition-opacity duration-500"
+          className="absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-500"
           style={{ backgroundImage: `url('${image}')` }}
         />
 
         {/* DARK GRADIENT OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
 
         {/* CONTENT */}
         <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end h-full">
@@ -121,7 +121,7 @@ function TiltCard({ image, text, name, role, delay }) {
             transition={{ delay: delay + 0.3 }}
             className="mb-8"
           >
-            <p className="text-gray-200 text-lg leading-relaxed font-light italic">
+            <p className="text-gray-200 text-sm leading-snug font-light italic">
               "{text}"
             </p>
           </motion.div>

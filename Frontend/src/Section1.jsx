@@ -12,7 +12,7 @@ export default function HeroSection() {
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 10, ease: "easeOut" }}
-          src="/images/pexels-andreas-koch-191856938-15155846.jpg"
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
           alt="background"
           className="w-full h-full object-cover opacity-40"
         />
@@ -44,7 +44,7 @@ export default function HeroSection() {
           ))}
         </div>
 
-        <div className="flex gap-10 text-gray-300">
+        <div className="hidden md:flex gap-10 text-gray-300">
           <a href="#">Features</a>
           <a href="#">Use Cases</a>
           <a href="#">Pricing</a>
@@ -62,7 +62,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl font-bold"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold"
 
         >
           Every Hire, Faster and Better
@@ -72,20 +72,20 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-6 max-w-xl text-gray-300"
+          className="mt-6 max-w-xl text-gray-300 text-base md:text-lg"
         >
           Stop losing great candidates to slow, manual hiring processes. Let AI
           handle the heavy lifting while you focus on building your team.
         </motion.p>
       </div>
 
-      {/* TESTIMONIALS */}
+      {/* TESTIMONIALS (Hidden on mobile/tablet to prevent overlap) */}
 
       {/* TOP LEFT */}
       {/* TOP LEFT */}
       <FloatingBubble
         position="top-[20%] left-[2%] md:left-[5%]"
-        image="/images/shreya.png"
+        image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop"
         text={`Sarah K.
 Founder at TechStart.
 
@@ -96,7 +96,7 @@ Candidates wait 3 weeks for replies while I'm juggling everything. We're losing 
       <FloatingBubble
         position="top-[20%] right-[2%] md:right-[5%]"
         side="right"
-        image="/images/rahul.png"
+        image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"
         text={`Rahul M.
 Hiring Manager at GrowthCo.
 
@@ -106,7 +106,7 @@ Posted on LinkedIn. Got 200 applications. Skimmed through 20. Hired on gut feeli
       {/* BOTTOM LEFT */}
       <FloatingBubble
         position="bottom-[20%] left-[2%] md:left-[5%]"
-        image="/images/priya.jpeg"
+        image="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1888&auto=format&fit=crop"
         text={`Priya S.
 CEO at InnovateLabs
 
@@ -117,7 +117,7 @@ I'm the CEO, product lead AND now doing HR? There's zero time to read 200 resume
       <FloatingBubble
         position="bottom-[20%] right-[2%] md:right-[5%]"
         side="right"
-        image="/images/amit.jpeg"
+        image="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop"
         text={`Amit T.
 Head of HR at ScaleUp
 
@@ -135,7 +135,7 @@ function FloatingBubble({ position, image, text, side = "left" }) {
       initial={{ opacity: 0, scale: 0.85, y: 20 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`absolute ${position} flex items-center`}
+      className={`absolute ${position} hidden lg:flex items-center`}
     >
       <div className={`relative flex items-center ${isLeft ? "" : "flex-row-reverse"}`}>
 
